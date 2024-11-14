@@ -1,0 +1,158 @@
+/* Basic sidebar styling */
+.sidebar {
+    width: 70px; /* Default collapsed width */
+    min-height: 100vh;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f0f4f9;
+    padding: 25px 5px; /* Reduced padding for alignment */
+    transition: width 0.3s ease; /* Smooth transition for expansion */
+     /* Keep elements within the sidebar */
+}
+
+/* Expanded sidebar styling */
+.sidebar.expanded {
+    width: 250px; /* Width when expanded */
+    padding: 25px 15px; /* Extra padding when expanded */
+}
+
+/* Image icon size */
+.sidebar img {
+    width: 20px;
+}
+
+/* Menu icon styling */
+.sidebar .menu {
+    display: block;
+    margin-left: 19px;
+    cursor: pointer;
+}
+
+/* New chat button styling */
+.sidebar .new-chat {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: #e6eaf1;
+    border-radius: 50px;
+    font-size: 14px;
+    color: grey;
+    cursor: pointer;
+    justify-content: center; /* Center-align text/icon in collapsed state */
+    overflow: hidden;
+    width: 100%; /* Ensure it stays within sidebar width */
+    box-sizing: border-box;
+}
+
+/* Show 'New Chat' text only when expanded */
+.sidebar .new-chat p {
+    display: none;
+}
+
+.sidebar.expanded .new-chat {
+    justify-content: flex-start; /* Left-align when expanded */
+    padding: 10px 15px; /* Adjust padding in expanded state */
+}
+
+.sidebar.expanded .new-chat p {
+    display: block;
+}
+
+/* Recent section styling */
+.sidebar .recent {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    animation: fadeIn 1.5s;
+}
+
+.sidebar .recent-title {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+.sidebar.expanded .recent-title {
+    display: block;
+}
+
+/* Recent entry styling */
+.sidebar .recent-entry {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 50px;
+    color: #282828;
+    cursor: pointer;
+    width: 100%; /* Ensure it stays within sidebar width */
+    box-sizing: border-box;
+}
+
+.sidebar .recent-entry:hover {
+    background-color: #e2e6eb;
+}
+
+/* Show recent entry text only when expanded */
+.sidebar .recent-entry p {
+    display: none;
+}
+
+.sidebar.expanded .recent-entry p {
+    display: block;
+}
+
+/* Bottom section styling */
+.sidebar .bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Optional: add spacing between items */
+}
+
+/* Bottom item styling with icons and text side-by-side */
+.sidebar .bottom-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 50px;
+    color: grey;
+    font-size: 14px;
+    cursor: pointer;
+    justify-content: center; /* Center-align icon/text in collapsed state */
+    width: 100%; /* Ensure it stays within sidebar width */
+    box-sizing: border-box;
+}
+
+.sidebar.expanded .bottom-item {
+    justify-content: flex-start; /* Left-align when expanded */
+    padding: 10px 15px; /* Adjust padding in expanded state */
+}
+
+/* Show bottom item text only when expanded */
+.sidebar .bottom-item p {
+    display: none;
+}
+
+.sidebar.expanded .bottom-item p {
+    display: block;
+}
+@media (max-width: 600px) {
+    .main-bottom input{
+    flex: none;
+    width: 150px;
+    }
+    .main-bottom img{
+    width: 20px;
+    }
+    .search-box{
+    padding: 5px 10px;
+    }
+}
+.search-box div {
+    gap: 5px ;
+
+}
